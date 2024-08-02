@@ -4,7 +4,7 @@
   <form action="/explore" method="POST" enctype="multipart/form-data">
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Author</label>
-      <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Full Name" required />
+      <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Full Name" required autocomplete="name"/>
     </div>
     <div class="mb-3">
       <label for="formFileMultiple" class="form-label">Upload Image</label>
@@ -34,7 +34,7 @@
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password (To edit in the future)</label>
-      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required />
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required autocomplete="new-password"/>
     </div>
     <button type="submit" class="btn btn-dark">Submit</button>
   </form>
