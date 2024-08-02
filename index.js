@@ -14,6 +14,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -112,18 +113,14 @@ app.post("/edit/:id", upload.single('image'), (req, res) => {
   const cardIndex = content.findIndex(item => item.id == req.params.id);
   if (cardIndex !== -1) {
     const card = content[cardIndex];
-    if (card.password === req.body.password) {
-      card.name = req.body.name;
-      card.title = req.body.title;
-      card.text = req.body.text;
-      card.subject = req.body.subject;
-      if (req.file) {
-        card.image = `/uploads/${req.file.filename}`;
-      }
-      res.redirect(`/explore?page=1`);
-    } else {
-      res.render("edit", { card, errorMessage: "Incorrect password", searchQuery: "", subject: "", apiKey: process.env.TINYMCE_API_KEY });
+    card.name = req.body.name;
+    card.title = req.body.title;
+    card.text = req.body.text;
+    card.subject = req.body.subject;
+    if (req.file) {
+      card.image = `/uploads/${req.file.filename}`;
     }
+    res.redirect(`/explore?page=1`);
   } else {
     res.status(404).send("Card not found");
   }
@@ -132,15 +129,20 @@ app.post("/edit/:id", upload.single('image'), (req, res) => {
 app.post("/delete/:id", (req, res) => {
   const cardIndex = content.findIndex(item => item.id == req.params.id);
   if (cardIndex !== -1) {
-    const card = content[cardIndex];
-    if (card.password === req.body.password) {
-      content.splice(cardIndex, 1);
-      res.redirect(`/explore?page=1`);
-    } else {
-      res.render("explore", { content, page: 1, totalPages: Math.ceil(content.length / ITEMS_PER_PAGE), errorMessage: "Incorrect password", subject: "", searchQuery: "", apiKey: process.env.TINYMCE_API_KEY });
-    }
+    content.splice(cardIndex, 1);
+    res.redirect(`/explore?page=1`);
   } else {
     res.status(404).send("Card not found");
+  }
+});
+
+app.post("/verify-password/:id", (req, res) => {
+  const card = content.find(item => item.id == req.params.id);
+  const { password } = req.body;
+  if (card && card.password === password) {
+    res.json({ success: true, id: card.id });
+  } else {
+    res.json({ success: false });
   }
 });
 

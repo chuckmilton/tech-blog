@@ -34,13 +34,6 @@
         <option value="vrar" <%= card.subject === 'vrar' ? 'selected' : '' %>>VR/AR</option>
       </select>
     </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required />
-      <% if (errorMessage) { %>
-        <small class="text-danger"><%= errorMessage %></small>
-      <% } %>
-    </div>
     <button type="submit" class="btn btn-dark">Submit</button>
   </form>
   <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
@@ -55,10 +48,6 @@
         </div>
         <div class="modal-body">
           <form action="/delete/<%= card.id %>" method="POST" class="d-flex flex-column">
-            <input type="password" name="password" class="form-control" placeholder="Password" required>
-            <% if (errorMessage) { %>
-              <small class="text-danger"><%= errorMessage %></small>
-            <% } %>
             <button type="submit" class="btn btn-danger mt-3">Confirm Delete</button>
           </form>
         </div>

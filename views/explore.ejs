@@ -31,28 +31,26 @@
                             <p><strong>Content:</strong> <%- object.text %></p>
                             <p><strong>Uploaded:</strong> <%= object.date %></p>
                         </div>
-                        <div class="modal-footer d-flex justify-content-start ">
-                            <a href="/edit/<%= object.id %>" class="btn btn-primary btn-sm">Edit</a>
+                        <div class="modal-footer d-flex justify-content-start">
+                            <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#verifyPasswordModal<%= index %>">Edit</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Delete Modal -->
-            <div class="modal fade" id="deleteModal<%= index %>" tabindex="-1" aria-labelledby="deleteModalLabel<%= index %>" aria-hidden="true">
+            <!-- Password Verification Modal -->
+            <div class="modal fade" id="verifyPasswordModal<%= index %>" tabindex="-1" aria-labelledby="verifyPasswordModalLabel<%= index %>" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="deleteModalLabel<%= index %>">Delete Confirmation</h5>
+                            <h5 class="modal-title" id="verifyPasswordModalLabel<%= index %>">Enter Password</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="/delete/<%= object.id %>" method="POST" class="d-flex flex-column">
-                                <input type="password" name="password" class="form-control" placeholder="Password" required>
-                                <% if (errorMessage) { %>
-                                    <small class="text-danger"><%= errorMessage %></small>
-                                <% } %>
-                                <button type="submit" class="btn btn-danger mt-3">Confirm Delete</button>
+                            <form id="verifyPasswordForm<%= object.id %>" class="d-flex flex-column">
+                                <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>
+                                <small id="passwordError<%= object.id %>" class="text-danger mb-2 d-none">Incorrect password</small>
+                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -88,3 +86,28 @@
 </div>
 
 <%- include("partials/footer.ejs")%>
+
+<script>
+  document.querySelectorAll('[id^="verifyPasswordForm"]').forEach((form) => {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const password = form.querySelector('input[name="password"]').value;
+      const cardId = form.id.replace('verifyPasswordForm', '');
+      fetch(`/verify-password/${cardId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ password })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = `/edit/${data.id}`;
+        } else {
+          document.getElementById(`passwordError${cardId}`).classList.remove('d-none');
+        }
+      });
+    });
+  });
+</script>
