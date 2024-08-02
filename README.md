@@ -15,3 +15,9 @@ EJS was used as the templating engine to generate dynamic HTML based on the appl
 ### Heroku
 
 The application is deployed on [Heroku](https://www.heroku.com/).
+
+## Disclaimer
+
+CSULB Tech News is a project created for educational purposes. This project is designed to provide a platform for sharing and discussing the latest technology news and trends, specifically tailored for the community of California State University, Long Beach (CSULB). This project is not officially affiliated with or endorsed by California State University, Long Beach. It is a student project created to demonstrate web development skills and to provide an educational tool for learning and practice.
+
+If you have any questions or concerns, please contact the project creator.
