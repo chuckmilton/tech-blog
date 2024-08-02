@@ -1,0 +1,90 @@
+<%- include("partials/header.ejs")%>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <% content.forEach((object, index) => { %>
+            <div class="col">
+                <div class="card h-100 position-relative card-hover" data-bs-toggle="modal" data-bs-target="#contentModal<%= index %>">
+                    <img src="<%= object.image %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= object.title %></h5>
+                        <p class="card-text"><%= object.name %></p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Uploaded <%= object.date %></small>
+                    </div>
+                    <div class="view-label">View</div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="contentModal<%= index %>" tabindex="-1" aria-labelledby="contentModalLabel<%= index %>" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="contentModalLabel<%= index %>"><%= object.title %></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="<%= object.image %>" class="img-fluid mb-3" alt="...">
+                            <p><strong>Author:</strong> <%= object.name %></p>
+                            <p><strong>Content:</strong> <%- object.text %></p>
+                            <p><strong>Uploaded:</strong> <%= object.date %></p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-start ">
+                            <a href="/edit/<%= object.id %>" class="btn btn-primary btn-sm">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delete Modal -->
+            <div class="modal fade" id="deleteModal<%= index %>" tabindex="-1" aria-labelledby="deleteModalLabel<%= index %>" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel<%= index %>">Delete Confirmation</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/delete/<%= object.id %>" method="POST" class="d-flex flex-column">
+                                <input type="password" name="password" class="form-control" placeholder="Password" required>
+                                <% if (errorMessage) { %>
+                                    <small class="text-danger"><%= errorMessage %></small>
+                                <% } %>
+                                <button type="submit" class="btn btn-danger mt-3">Confirm Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+    <!-- Pagination controls -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center mt-5">
+            <% if (page > 1) { %>
+                <li class="page-item">
+                    <a class="page-link" href="?page=<%= page - 1 %>&subject=<%= subject %>&search=<%= searchQuery %>" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            <% } %>
+            <% for (let i = 1; i <= totalPages; i++) { %>
+                <li class="page-item <%= i === page ? 'active' : '' %>">
+                    <a class="page-link" href="?page=<%= i %>&subject=<%= subject %>&search=<%= searchQuery %>"><%= i %></a>
+                </li>
+            <% } %>
+            <% if (page < totalPages) { %>
+                <li class="page-item">
+                    <a class="page-link" href="?page=<%= page + 1 %>&subject=<%= subject %>&search=<%= searchQuery %>" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </nav>
+</div>
+
+<%- include("partials/footer.ejs")%>

@@ -1,0 +1,70 @@
+<%- include("partials/header.ejs")%>
+
+<div class="form-container mx-auto p-4 bg-light">
+  <div class="d-flex justify-content-end">
+    <button type="button" class="btn-close" aria-label="Close" onclick="window.history.back()"></button>
+  </div>
+  <form action="/edit/<%= card.id %>" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Author</label>
+      <input type="text" name="name" class="form-control" id="exampleFormControlInput1" value="<%= card.name %>" required />
+    </div>
+    <div class="mb-3">
+      <label for="formFileMultiple" class="form-label">Upload Image</label>
+      <input class="form-control" type="file" name="image" id="formFileMultiple" />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput2" class="form-label">Title</label>
+      <input type="text" name="title" class="form-control" id="exampleFormControlInput2" value="<%= card.title %>" required />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+      <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"><%= card.text %></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="subjectSelect" class="form-label">Where to post</label>
+      <select class="form-select" name="subject" id="subjectSelect" required>
+        <option value="faq" <%= card.subject === 'faq' ? 'selected' : '' %>>FAQ's</option>
+        <option value="careers" <%= card.subject === 'careers' ? 'selected' : '' %>>Jobs/Internships</option>
+        <option value="research" <%= card.subject === 'research' ? 'selected' : '' %>>Research Opportunities</option>
+        <option value="events" <%= card.subject === 'events' ? 'selected' : '' %>>Events</option>
+        <option value="swe" <%= card.subject === 'swe' ? 'selected' : '' %>>SWE</option>
+        <option value="mlai" <%= card.subject === 'mlai' ? 'selected' : '' %>>ML/AI</option>
+        <option value="cybersec" <%= card.subject === 'cybersec' ? 'selected' : '' %>>CyberSec</option>
+        <option value="vrar" <%= card.subject === 'vrar' ? 'selected' : '' %>>VR/AR</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required />
+      <% if (errorMessage) { %>
+        <small class="text-danger"><%= errorMessage %></small>
+      <% } %>
+    </div>
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+  <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+
+  <!-- Delete Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete Confirmation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/delete/<%= card.id %>" method="POST" class="d-flex flex-column">
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
+            <% if (errorMessage) { %>
+              <small class="text-danger"><%= errorMessage %></small>
+            <% } %>
+            <button type="submit" class="btn btn-danger mt-3">Confirm Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs")%>
