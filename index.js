@@ -151,7 +151,170 @@ const content = [
     id: 269537,
     image: '/uploads/1722730753709-455992850-techconference.jpg',
     date: '08/03/2024'
-  }
+  },
+  {
+    name: 'Jennifer Lee',
+    title: "Understanding the Rise of CSULB's Engineering Programs",
+    text: '<p><strong>Introduction</strong></p>\r\n' +
+      '<p>Cal State Long Beach (CSULB) has recently achieved significant recognition in the 2024 U.S. News and World Report rankings, particularly in its engineering programs. This article delves into the specifics of these achievements and what they mean for current and prospective students.</p>\r\n' +
+      '<p><strong>High Rankings in Engineering</strong></p>\r\n' +
+      "<p>The College of Engineering at CSULB secured its highest rankings ever, placing 20th in undergraduate engineering, 8th in civil engineering, 10th in computer engineering, and 12th in electrical engineering among schools without a PhD program. These impressive rankings reflect the college's commitment to excellence in education, research, and innovation.</p>\r\n" +
+      "<p><strong>Dean's Perspective</strong></p>\r\n" +
+      '<p>&ldquo;While the USNWR rankings are not perfect, I am pleased to see the good work of our faculty and students being recognized by the engineering leadership in the country,&rdquo; said Dean Jinny Rhee. &ldquo;As far as I am aware, the College of Engineering has not placed in the top-20 before, and it is deserving of celebration.&rdquo;</p>\r\n' +
+      '<p><strong>Focus on Hands-On Learning</strong></p>\r\n' +
+      "<p>CSULB's engineering programs emphasize hands-on learning, ensuring that students are well-prepared for real-world challenges. The computer engineering department, for instance, is renowned for its focus on practical skills, enabling students to design their own career paths.</p>\r\n" +
+      '<p><strong>Conclusion</strong></p>\r\n' +
+      "<p>These high rankings and the college's continuous efforts in fostering innovation and practical skills make CSULB a top choice for aspiring engineers. The university&rsquo;s achievements in engineering are a testament to its dedication to providing high-quality education and producing well-rounded graduates ready to tackle modern challenges.</p>",
+    subject: 'faq',
+    password: 'password',
+    id: 389225,
+    image: '/uploads/1722732770659-810801853-csulbtechfaq.jpg',
+    date: '08/03/2024'
+  },
+  {
+    name: 'Daniel Kim',
+    title: 'Opportunities at the 2024 Engineering & Technology Career Fair',
+    text: '<p><strong>Introduction</strong></p>\r\n' +
+      '<p>The 2024 Engineering &amp; Technology Career Fair at CSULB is a pivotal event for students seeking career opportunities in engineering and technology. This article provides an overview of what to expect, how to prepare, and the benefits of attending.</p>\r\n' +
+      '<p><strong>Event Overview</strong></p>\r\n' +
+      '<p>Scheduled for September 21st, 2024, from 12 PM to 4 PM in the USU Ballrooms, the career fair is designed to connect students with potential employers offering full-time, part-time, and internship positions. The event attracts a wide range of companies, from startups to established industry leaders.</p>\r\n' +
+      '<p><strong>Preparing for the Fair</strong></p>\r\n' +
+      '<p>Students are encouraged to bring multiple copies of their resumes, dress professionally, and research participating companies beforehand. The Career Development Center offers workshops on resume writing and interview techniques leading up to the fair.</p>\r\n' +
+      '<p><strong>Networking Opportunities</strong></p>\r\n' +
+      '<p>The fair provides a unique platform for students to network with industry professionals, learn about various companies, and explore different career paths. It&rsquo;s an excellent opportunity to gain insights into what employers are looking for and to make valuable connections that can aid in job searches.</p>\r\n' +
+      '<p><strong>Conclusion</strong></p>\r\n' +
+      '<p>Attending the Engineering &amp; Technology Career Fair is an essential step for students looking to advance their careers in tech and engineering. It&rsquo;s an opportunity to showcase their skills, gain industry knowledge, and secure job or internship positions.</p>',
+    subject: 'careers',
+    password: 'password',
+    id: 390289,
+    image: '/uploads/1722732863284-254200072-csulbcareer.jpg',
+    date: '08/03/2024'
+  },
+  {
+    name: 'Laura Fernandez',
+    title: 'How CSULB is Harnessing AI for Educational Excellence',
+    text: '<p><strong>Introduction</strong></p>\r\n' +
+      '<p>Artificial Intelligence (AI) is revolutionizing various sectors, including education. CSULB is at the forefront of integrating AI into its educational framework to enhance teaching, learning, and administrative processes.</p>\r\n' +
+      '<p><strong>AI Steering Committee</strong></p>\r\n' +
+      '<p>The AI Steering Committee at CSULB plays a crucial role in implementing AI technologies across campus. Co-chaired by Karyn Scissum Gunn, Provost and Senior Vice President for Academic Affairs, and Beth Lesen, Vice President of Student Affairs, the committee ensures ethical and effective use of AI.</p>\r\n' +
+      '<p><strong>Microsoft Enterprise Copilot</strong></p>\r\n' +
+      '<p>One of the latest additions to CSULB&rsquo;s AI toolkit is Microsoft Enterprise Copilot, which leverages GPT-4 for secure AI applications. This tool assists in writing, presentations, and data analysis while ensuring that personal and university data is protected.</p>\r\n' +
+      '<p><strong>AI Technology Website and Workshops</strong></p>\r\n' +
+      '<p>CSULB has launched an AI Technology website, which serves as a resource for students and faculty. The website includes information on AI tools, guidelines for generative AI, and upcoming workshops. These workshops, hosted by Academic Technology Services, aim to educate the campus community on the latest AI developments and their applications.</p>\r\n' +
+      '<p><strong>Conclusion</strong></p>\r\n' +
+      '<p>CSULB&rsquo;s commitment to integrating AI into its educational framework is preparing students and faculty for a future where AI plays a pivotal role. These efforts highlight the university&rsquo;s dedication to staying at the forefront of technological innovation in education.</p>',
+    subject: 'research',
+    password: 'password',
+    id: 433367,
+    image: '/uploads/1722732935824-875355119-researchcsulb.jpg',
+    date: '08/03/2024'
+  },
+  {
+  name: 'Priya Patel',
+  title: 'AI Transformations in CSULB Classrooms',
+  text: '<p><strong>Introduction</strong></p>\r\n' +
+    '<p>Artificial Intelligence (AI) and Machine Learning (ML) are transforming the educational landscape at CSULB. This article explores the various ways these technologies are being utilized to enhance teaching and learning.</p>\r\n' +
+    '<p><strong>AI-Powered Tools</strong></p>\r\n' +
+    '<p>CSULB has introduced AI-powered tools like Microsoft Enterprise Copilot, which assist in various academic tasks such as writing, presentations, and data analysis. These tools ensure data security and provide significant aid to both students and faculty.</p>\r\n' +
+    '<p><strong>Turnitin AI Detection</strong></p>\r\n' +
+    '<p>To maintain academic integrity, CSULB faculty can now use Turnitin&rsquo;s AI detection tool, which identifies AI-generated content in student submissions. This ensures that students adhere to academic standards and produce original work.</p>\r\n' +
+    '<p><strong>Professional Development</strong></p>\r\n' +
+    '<p>Academic Technology Services at CSULB offers numerous events and workshops focused on AI and its applications. These sessions provide faculty and staff with the knowledge and skills needed to effectively integrate AI into their teaching practices.</p>\r\n' +
+    '<p><strong>Conclusion</strong></p>\r\n' +
+    '<p>CSULB&rsquo;s adoption of AI and ML technologies is revolutionizing its educational practices. By leveraging these tools, the university is enhancing the learning experience and preparing students for a future where AI plays a crucial role.</p>',
+  subject: 'mlai',
+  password: 'password',
+  id: 178301,
+  image: '/uploads/1722732998384-738401273-csulbaiml.jpg',
+  date: '08/03/2024'
+},
+{
+  name: 'John Harris',
+  title: 'Enhancing Cybersecurity at CSULB',
+  text: '<p><strong>Introduction</strong></p>\r\n' +
+    "<p>As cyber threats become more sophisticated, CSULB is proactively enhancing its cybersecurity measures to protect its digital infrastructure. This article discusses the university's strategies and initiatives to ensure a secure digital environment.</p>\r\n" +
+    '<p><strong>AI-Driven Security Solutions</strong></p>\r\n' +
+    '<p>CSULB is implementing advanced AI-driven security solutions to detect and respond to cyber threats in real-time. These solutions analyze vast amounts of data to identify unusual patterns and potential security breaches.</p>\r\n' +
+    '<p><strong>Cybersecurity Education</strong></p>\r\n' +
+    '<p>The university is also focusing on educating students and staff about best practices in cybersecurity. Regular workshops and training sessions are conducted to raise awareness about common threats and preventive measures.</p>\r\n' +
+    '<p><strong>Collaboration with Industry Experts</strong></p>\r\n' +
+    "<p>CSULB collaborates with industry experts to stay updated on the latest cybersecurity trends and technologies. This partnership ensures that the university's cybersecurity infrastructure is robust and capable of handling emerging threats.</p>\r\n" +
+    '<p><strong>Conclusion</strong></p>\r\n' +
+    '<p>CSULB&rsquo;s commitment to enhancing cybersecurity ensures a safe and secure digital environment for its community. By implementing advanced technologies and educating its members, the university is well-prepared to tackle modern cyber threats.</p>',
+  subject: 'cybersec',
+  password: 'password',
+  id: 988299,
+  image: '/uploads/1722733065897-851912313-cyberseccsulb.jpeg',
+  date: '08/03/2024'
+},
+{
+  name: 'Emily Nguyen',
+  title: 'Software Engineering at CSULB: Embracing the Future',
+  text: '<p><strong>Introduction</strong></p>\r\n' +
+    '<p>The software engineering program at CSULB is constantly evolving to keep pace with industry advancements. This article explores the latest trends and innovations in software engineering education at the university.</p>\r\n' +
+    '<p><strong>Low-Code/No-Code Platforms</strong></p>\r\n' +
+    '<p>CSULB is incorporating low-code and no-code development platforms into its curriculum. These platforms allow students to build applications with minimal coding, speeding up the development process and making it more accessible.</p>\r\n' +
+    '<p><strong>DevSecOps Integration</strong></p>\r\n' +
+    '<p>The program emphasizes DevSecOps, integrating security into the development process from the start. This approach ensures that students learn to build secure software, addressing potential vulnerabilities early in the development lifecycle.</p>\r\n' +
+    '<p><strong>Microservices Architecture</strong></p>\r\n' +
+    '<p>CSULB&rsquo;s software engineering courses now include microservices architecture, which breaks down applications into smaller, independent services. This architecture enhances scalability and resilience, preparing students for modern software development challenges.</p>\r\n' +
+    '<p><strong>Conclusion</strong></p>\r\n' +
+    '<p>CSULB&rsquo;s software engineering program is at the cutting edge of educational innovation. By integrating the latest industry trends and technologies, the university ensures that its graduates are well-equipped to excel in the dynamic field of software engineering.</p>',
+  subject: 'swe',
+  password: 'password',
+  id: 103331,
+  image: '/uploads/1722733169836-745166797-csulbswe.jpg',
+  date: '08/03/2024'
+},
+{
+  name: 'Chris Johnson',
+  title: 'Upcoming Tech Events at CSULB You Can’t Miss',
+  text: '<p><strong>Introduction</strong></p>\r\n' +
+    '<p>CSULB hosts a variety of tech-related events throughout the year, providing valuable opportunities for students to learn, network, and showcase their skills. Here are some of the must-attend events in 2024.</p>\r\n' +
+    '<p><strong>Women in Engineering Conference</strong></p>\r\n' +
+    '<p>Scheduled for March 23, 2024, this conference focuses on empowering women in engineering. It features keynote speakers, panel discussions, and networking sessions, aiming to inspire and support female engineers.</p>\r\n' +
+    '<p><strong>Engineering Job &amp; Internship Fair</strong></p>\r\n' +
+    '<p>On September 21, 2024, the Engineering Job &amp; Internship Fair will take place in the USU Ballrooms. This event connects students with potential employers, offering numerous opportunities for internships and full-time positions.</p>\r\n' +
+    '<p><strong>Senior Design Project Expo</strong></p>\r\n' +
+    '<p>Held on May 8-9, 2024, the Senior Design Project Expo showcases the innovative projects developed by graduating students. It&rsquo;s an excellent opportunity for students to present their work to industry professionals and peers.</p>\r\n' +
+    '<p><strong>Conclusion</strong></p>\r\n' +
+    '<p>Attending these tech events at CSULB provides students with invaluable experiences, from networking with professionals to gaining insights into the latest industry trends. Don&rsquo;t miss out on these opportunities to enhance your educational journey and career prospects.</p>',
+  subject: 'events',
+  password: 'password',
+  id: 663848,
+  image: '/uploads/1722733222802-316635715-csulbevents.jpg',
+  date: '08/03/2024'
+},
+{
+  name: 'Michael Stevens',
+  title: 'Virtual Reality Operations Club (VROC) at CSULB',
+  text: '<p>The Virtual Reality Operations Club (VROC) at California State University Long Beach (CSULB) is an innovative student organization dedicated to exploring and advancing virtual reality (VR) and augmented reality (AR) technologies. Founded with the mission to provide hands-on experience and foster a collaborative environment, VROC engages students in cutting-edge VR and AR projects that span various applications from gaming to education and beyond.</p>\r\n' +
+    '<h4>Club Activities and Projects</h4>\r\n' +
+    '<ol>\r\n' +
+    '<li>\r\n' +
+    '<p><strong>Hands-On Workshops</strong>: VROC regularly conducts workshops where members can learn about VR/AR development, including software like Unity and hardware such as Oculus Rift and HTC Vive. These workshops are designed to cater to both beginners and advanced users, ensuring everyone can enhance their skills.</p>\r\n' +
+    '</li>\r\n' +
+    '<li>\r\n' +
+    '<p><strong>Collaborative Projects</strong>: Members of VROC collaborate on a variety of projects, often partnering with other student organizations or departments. One notable project is the AR cooking simulator game, which was developed to provide an immersive learning experience in culinary arts.</p>\r\n' +
+    '</li>\r\n' +
+    '<li>\r\n' +
+    '<p><strong>Industry Engagement</strong>: The club organizes guest lectures and networking events with industry professionals. These sessions offer insights into the latest trends in VR/AR and provide valuable networking opportunities for students aspiring to enter the field.</p>\r\n' +
+    '</li>\r\n' +
+    '<li>\r\n' +
+    '<p><strong>Competitions and Hackathons</strong>: VROC members frequently participate in competitions and hackathons, both locally and nationally. These events challenge students to develop innovative VR/AR applications within a limited time frame, fostering creativity and teamwork.</p>\r\n' +
+    '</li>\r\n' +
+    '</ol>\r\n' +
+    '<h4>Membership and Community</h4>\r\n' +
+    '<p>VROC is open to all students at CSULB, regardless of their major or level of experience. The club prides itself on being an inclusive community where students can share ideas, collaborate on projects, and develop their expertise in VR/AR technologies.</p>\r\n' +
+    "<p>By joining VROC, students not only gain technical skills but also develop soft skills such as teamwork, project management, and public speaking. The club's activities are designed to prepare members for careers in the rapidly growing field of virtual and augmented reality.</p>\r\n" +
+    '<p>For more information about VROC and how to get involved, you can visit the <a href="https://csulb.campuslabs.com/engage/organization/virtualreality">CSULB Student Organizations page</a>.</p>',
+  subject: 'vrar',
+  password: 'password',
+  id: 294093,
+  image: '/uploads/1722733404971-628604199-vr event.jpeg',
+  date: '08/03/2024'
+}
+
 ];
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -306,7 +469,6 @@ app.post("/explore", upload.single('image'), (req, res) => {
   data.date = today;
   content.push(data);
   console.log(data);
-  console.log(`Content: ${JSON.stringify(content)}`);
 
   res.redirect(`/explore?page=${Math.ceil(content.length / ITEMS_PER_PAGE)}`);
 });
